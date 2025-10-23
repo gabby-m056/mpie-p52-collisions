@@ -13,7 +13,7 @@ public class FPSCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Fire1")&& ammo >0){
+        if(Input.GetButtonDown("Fire1")&& playerAmmo >0){
             //shoot
             Ray ray =  Camera.main.ViewportPointToRay(new Vector3(0.5f ,0.5f ,0.0f));
             RaycastHit result; 
@@ -21,7 +21,7 @@ public class FPSCollision : MonoBehaviour
                 GameObject g = result.collider.gameObject;
                 Animation a = g.transform.parent.GetComponent<Animation>();
                 a.Play("LowerBridge");
-                ammo--;
+                playerAmmo--;
             }
            
 
