@@ -17,6 +17,6 @@ public class DoorCollision : MonoBehaviour
     void OnTriggerEnter(Collider other){
         GameObject parent = transform.parent.gameObject;
         Animation a = parent.GetComponent<Animation>();
-        a.Play("Open_Animation");
+        a.Play("OpenDoor");
     }
 }
