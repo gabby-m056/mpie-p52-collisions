@@ -19,7 +19,7 @@ public class FPSCollision : MonoBehaviour
     void OnTriggerEnter(Collider other){
         
         if(other.gameObject.name == "AmmoBox"){
-            playerAmmo +=20
+            playerAmmo +=20;
             other.gameObject.SetActive(false);
         }
     }
