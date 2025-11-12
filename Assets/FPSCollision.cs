@@ -37,6 +37,8 @@ public class FPSCollision : MonoBehaviour
         
         if(other.gameObject.name == "AmmoBox"){
             playerAmmo +=20;
+            AudioSource pickUp = other.gameObject.GetComponent<AudioSource>();
+            pickUp.Play();
             other.gameObject.SetActive(false);
         }
     }
