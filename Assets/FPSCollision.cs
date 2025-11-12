@@ -26,7 +26,7 @@ public class FPSCollision : MonoBehaviour
            
 
         }
-        else
+        else if(Input.GetButtonDown("Fire1"))
         {
             AudioSource noAmmo = GetComponent<AudioSource>();
             noAmmo.Play();
