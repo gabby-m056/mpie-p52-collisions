@@ -18,5 +18,7 @@ public class DoorCollision : MonoBehaviour
         GameObject parent = transform.parent.gameObject;
         Animation a = parent.GetComponent<Animation>();
         a.Play("OpenDoor");
+        AudioSource od = GetComponent<AudioSource>();
+        od.Play();
     }
 }
