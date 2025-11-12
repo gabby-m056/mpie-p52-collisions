@@ -26,6 +26,11 @@ public class FPSCollision : MonoBehaviour
            
 
         }
+        else
+        {
+            AudioSource noAmmo = GetComponent<AudioSource>();
+            noAmmo.Play();
+        }
     }
 
     void OnTriggerEnter(Collider other){
